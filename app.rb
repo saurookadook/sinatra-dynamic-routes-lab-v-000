@@ -7,7 +7,9 @@ class App < Sinatra::Base
   end
 
   get '/say/:number/:phrase' do
-
+    @number = params[:number]
+    @phrase = params[:phrase]
+    erb :say_num_phrase
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
