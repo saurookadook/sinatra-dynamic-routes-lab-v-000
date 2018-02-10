@@ -7,6 +7,10 @@ class App < Sinatra::Base
     erb :reversename
   end
 
+  get '/square/:number' do
+    @number = params[:number]
+  end
+
   get '/say/:number/:phrase' do
     @number = params[:number]
     @phrase = params[:phrase]
